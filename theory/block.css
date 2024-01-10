@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+section {
+  margin: 0 auto;
+  margin-top: 100px;
+  /* margin-left: -100px; */
+  width: 500px;
+  /* background-color: lightgreen; */
+  outline: 3px dashed red;
+}
+
+p {
+  box-sizing: border-box;
+  /* width: 500px; */
+  height: 120px;
+
+  /* margin: 20px 50px; */
+  margin: auto;
+
+  padding: 20px;
+  /* border-left: 3px dashed red;
+  border-top: 10px solid teal; */
+  /* border: 5px dotted blueviolet; */
+  border-bottom: none;
+
+  /* border-radius: 20px 30px; */
+  background-color: lightblue;
+
+  overflow: hidden;
+}
+
+.test {
+  background-color: lightgreen;
+  /* margin-left: 50px; */
+  /* margin-top: -50px; */
+  /* width: 500px; */
+  /* height: 150px; */
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 100px;
+  text-align: center;
+
+  border-radius: 50%;
+  background-color: salmon;
+  color: red;
+}
