@@ -55,6 +55,13 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.ingridients,
+.made,
+.products,
+.bestsellers,
+.reviews {
+  padding: 60px 0;
+}
 .container {
   width: 1168px;
   margin: 0 auto;
@@ -68,6 +75,10 @@ img {
 .products-title,
 .bestsellers-title,
 .reviews-title {
+  width: 412px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
   font-weight: 600;
   font-size: 24px;
   line-height: 1.17;
@@ -121,6 +132,9 @@ img {
 
 /* #region Logo */
 .logo {
+  display: inline-flex;
+  align-items: center;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
@@ -128,11 +142,14 @@ img {
 }
 .logo-accent {
   font-style: italic;
+  margin-left: 4px;
 }
 /* #endregion Logo */
 
 /* #region Socials */
 .socials {
+  display: flex;
+  gap: 14px;
 }
 .socials-item {
   width: 40px;
@@ -154,13 +171,28 @@ img {
 /* #region Header */
 .header {
 }
+.header > .container {
+  display: flex;
+  align-items: center;
+}
 .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-grow: 1;
+  margin-right: 90px;
 }
 .header-list {
+  display: flex;
+  gap: 24px;
 }
 .header-item {
 }
 .header-link {
+  display: block;
+  padding: 32px 0;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
@@ -173,6 +205,7 @@ img {
 
 /* #region Hero */
 .hero {
+  padding-bottom: 80px;
 }
 .hero > .container {
   padding: 381px 40px 40px 40px;
@@ -193,13 +226,24 @@ img {
   letter-spacing: -0.03em;
   color: #fff;
 }
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .hero-list {
+  display: inline-flex;
+  gap: 14px;
 }
 .hero-item {
 }
 .hero-btn {
 }
 .hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
@@ -210,25 +254,44 @@ img {
 .hero-link:focus {
   color: #fd9222;
 }
+.hero-link-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: #fff;
+  border-radius: 50%;
+}
 .hero-link-icon {
 }
 /* #endregion Hero */
 
 /* #region Benefits */
 .benefits {
+  padding: 50px 0;
   background: #1e1823;
 }
 .benefits-list {
+  display: flex;
+  justify-content: center;
+  gap: 88px;
 }
 .benefits-item {
+  width: 308px;
 }
 .benefits-caption {
+  margin-bottom: 18px;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 1.22;
   color: #fff;
 }
 .benefits-desc {
+  font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.7);
@@ -237,15 +300,38 @@ img {
 
 /* #region Ingridients */
 .ingridients {
+  padding-top: 120px;
 }
 .ingridients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 .ingridients-item {
+  width: calc((100% - 32px * 3) / 4);
+
+  padding: 28px;
   background: #fff;
+  border-radius: 15px;
+  border: 1px solid transparent;
+}
+.ingridients-item:nth-child(4n + 1) {
+  color: #fff;
+  background: #fd9222;
+}
+.ingridients-item:nth-child(4n + 3) {
+  color: #fff;
+  background: #1e1823;
+}
+.ingridients-item:nth-child(2n) {
+  border-color: #fd9222;
 }
 .ingridients-ill {
 }
 .ingridients-caption {
+  margin-top: 36px;
+
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.29;
   letter-spacing: -0.02em;
@@ -275,13 +361,24 @@ img {
 .products {
 }
 .products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 18px;
 }
 .products-item {
+  width: calc((100% - 18px * 3) / 4);
+
+  padding: 32px 20px;
   background: #fff;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+
+  text-align: center;
 }
 .products-ill {
 }
 .products-heading {
+  margin: 8px 0 2px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -289,16 +386,20 @@ img {
   text-transform: uppercase;
 }
 .products-category {
+  margin-bottom: 18px;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: -0.02em;
   color: rgba(17, 17, 17, 0.7);
 }
 .products-price {
+  padding: 8px 20px;
   font-weight: 600;
   line-height: 1.21;
 
-  background-color: #fafafa;
+  background: #fafafa;
+  border-radius: 100px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 /* #endregion Products */
 
@@ -324,14 +425,29 @@ img {
 /* #region Reviews */
 .reviews {
 }
+.reviews-title {
+  margin-bottom: 92px;
+}
 .reviews-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+
+  margin-bottom: 50px;
 }
 .reviews-item {
+  width: 360px;
+  padding: 24px;
+
   background: #fff;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 .reviews-avatar {
+  margin: 0 auto;
 }
 .reviews-author {
+  margin-bottom: 24px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -342,6 +458,10 @@ img {
   letter-spacing: -0.02em;
   text-align: center;
   color: rgba(17, 17, 17, 0.7);
+}
+.reviews .btn {
+  display: block;
+  margin: 0 auto;
 }
 /* #endregion Reviews */
 
