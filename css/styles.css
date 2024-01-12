@@ -8,6 +8,9 @@ body {
   font-style: normal;
   font-weight: 400;
   */
+
+  /* Pattern image */
+  /* background-image: url('data:image/svg+xml,%3Csvg width="52" height="26" viewBox="0 0 52 26" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); */
 }
 ul,
 ol {
@@ -67,8 +70,8 @@ img {
   margin: 0 auto;
   padding: 0 16px;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 .ingridients-title,
 .made-title,
@@ -161,11 +164,26 @@ img {
   height: 100%;
   padding: 8px;
 
+  color: #111111;
+
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
 }
-.socials-icon {
+.socials-link:hover,
+.socials-link:focus {
+  color: #fd9222;
+  border-color: rgba(253, 146, 34, 0.1);
 }
+.socials-icon {
+  fill: currentColor;
+}
+/* .socials-icon {
+  fill: #111111;
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #fd9222;
+} */
 /* #endregion Socials */
 
 /* #region Header */
@@ -201,6 +219,17 @@ img {
 .header-link:focus {
   color: #fd9222;
 }
+.header-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
+}
+.header-link.current::after {
+  background: #fd9222;
+}
 /* #endregion Header */
 
 /* #region Hero */
@@ -211,7 +240,15 @@ img {
   padding: 381px 40px 40px 40px;
 
   border-radius: 30px;
-  background: rgba(17, 17, 17, 0.7);
+  background-color: rgba(17, 17, 17, 0.7);
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.1),
+      rgba(17, 17, 17, 0.1)
+    ),
+    url('../images/hero/hero-bg-progressive.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 /* .hero-container {
   background: rgba(17, 17, 17, 0.7);
@@ -225,6 +262,18 @@ img {
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+
+  /* font-family: 'Rubik Mono One', monospace;
+  font-size: 120px; */
+
+  /* background-image: url('../images/hero/hero-bg-progressive.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent; */
 }
 .hero-wrapper {
   display: flex;
@@ -273,6 +322,20 @@ img {
 .benefits {
   padding: 50px 0;
   background: #1e1823;
+}
+.benefits-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.benefits-icon {
 }
 .benefits-list {
   display: flex;
@@ -326,6 +389,10 @@ img {
 .ingridients-item:nth-child(2n) {
   border-color: #fd9222;
 }
+.ingredients-icon {
+  fill: transparent;
+  stroke: #fff;
+}
 .ingridients-ill {
 }
 .ingridients-caption {
@@ -344,7 +411,20 @@ img {
 }
 .made-pic {
 }
+
+.made-wrapper {
+  display: flex;
+  gap: 20px;
+}
+.made-right-side {
+  padding: 32px;
+  border-radius: 15px;
+  background: #fff;
+}
 .made-subtitle {
+  width: 350px;
+  margin-bottom: 28px;
+
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
@@ -352,8 +432,28 @@ img {
 .made-list {
 }
 .made-item {
+  display: flex;
+  gap: 8px;
+
+  font-size: 14px;
   line-height: 1.29;
   letter-spacing: -0.02em;
+}
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.made-item::before {
+  content: '';
+  flex-shrink: 0;
+
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+
+  background-color: #4c4c4c;
+  border: 1px solid #eceded;
+  border-radius: 50%;
 }
 /* #endregion Made */
 
@@ -442,6 +542,7 @@ img {
   background: #fff;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
+  box-shadow: 0px 9px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-avatar {
   margin: 0 auto;
