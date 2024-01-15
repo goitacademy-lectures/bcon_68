@@ -1,4 +1,5 @@
-const bodyEl = document.querySelector('.page');
+// Додавання стилей для фону Header
+// під час прокручування сторінки
 const headerEl = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
