@@ -14,9 +14,6 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
       rel="stylesheet" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
-      rel="stylesheet" /> -->
     <!-- Normalize -->
     <link
       rel="stylesheet"
@@ -90,7 +87,7 @@
     </header>
     <!-- Main -->
     <main>
-      <!-- #region Hero section -->
+      <!-- Hero section -->
       <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">
@@ -121,7 +118,6 @@
           </div>
         </div>
       </section>
-      <!-- #endregion  -->
       <!-- Benefits section -->
       <section class="benefits" id="benefits">
         <div class="container">
@@ -593,8 +589,82 @@
       </div>
     </footer>
     <!-- Modal window -->
-    <div class="backdrop">
-      <div class="modal">Modal</div>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn" type="button" aria-label="Modal close button">
+          <svg class="modal-btn-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-caption">
+          LEAVE A REVIEW ABOUT <span class="accent">OUR CHOCOLATE</span>
+        </p>
+
+        <form class="modal-form" name="subscription">
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_name">Name</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                name="user_name"
+                id="user_name" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_email">Email</label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                name="user_email"
+                id="user_email" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-form-field">
+            <label class="modal-form-label" for="user_phone">
+              Phone number
+            </label>
+            <div class="modal-form-wrapper">
+              <input
+                class="modal-form-input"
+                type="tel"
+                name="user_phone"
+                id="user_phone" />
+              <svg class="modal-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal-form-wrapper">
+            <label for="user_review">Comment</label>
+            <textarea
+              name="user_review"
+              id="user_review"
+              rows="5"
+              placeholder="Enter text"></textarea>
+          </div>
+
+          <label>
+            <input type="checkbox" name="user_agreement" value="true" />
+            I accept the terms and conditions of the
+            <a href="" target="_blank" rel="noopener noreferrer">
+              Privacy Policy
+            </a>
+          </label>
+
+          <button class="btn btn-accent" type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
