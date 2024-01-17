@@ -864,3 +864,216 @@ img {
   stroke: #404040;
 }
 /* #endregion Modal */
+
+.review-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  max-width: 408px;
+  width: calc(100% - 20px);
+  min-height: 584px;
+  padding: 24px;
+  padding-top: 72px;
+
+  background: #fcfcfc;
+}
+.review-modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: background 300ms ease-in-out, border-color 300ms ease-in-out;
+}
+.review-modal-btn:hover,
+.review-modal-btn:focus {
+  background: #404bbf;
+  border-color: transparent;
+}
+.review-modal-icon {
+  fill: #2e2f42;
+  transition: fill 300ms ease-in-out;
+}
+.review-modal-btn:hover .review-modal-icon,
+.review-modal-btn:focus .review-modal-icon {
+  fill: #ffffff;
+}
+.review-modal-caption {
+  display: block;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--NAVY-BLUE, #2e2f42);
+}
+.review-form {
+}
+.review-form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+}
+.review-form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 38px;
+
+  outline: transparent;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+
+  transition: border-color 300ms ease-in-out;
+}
+.review-form-input:focus {
+  border-color: #4d5ae5;
+}
+.review-form-input::placeholder {
+  color: red;
+  opacity: 0;
+  transition: opacity 150ms ease-in;
+}
+.review-form-input:focus::placeholder {
+  opacity: 1;
+  transition-delay: 350ms;
+}
+.review-form-label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+
+  padding: 0 10px;
+  background: #fff;
+
+  transition: transform 300ms ease-in;
+}
+.review-form-input:focus + .review-form-label,
+.review-form-input:not(:placeholder-shown) + .review-form-label {
+  transform: translateX(-30%) translateY(-155%) scale(0.6);
+}
+.review-form-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  transition: fill 300ms ease-in-out;
+  user-select: none;
+}
+.review-form-input:focus ~ .review-form-icon {
+  fill: #4d5ae5;
+}
+.review-form-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 300ms ease, box-shadow 300ms ease;
+}
+input[type='checkbox']:checked ~ .review-form-checkbox {
+  background: #404bbf;
+  border-color: transparent;
+}
+input[type='checkbox']:focus-visible ~ .review-form-checkbox {
+  box-shadow: 0 0 0 4px rgba(64, 75, 191, 0.25);
+}
+.review-form-checkbox-icon {
+  fill: #f4f4fd;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 300ms ease 150ms,
+    transform 300ms cubic-bezier(0.61, -0.01, 0.52, 1.46) 150ms;
+}
+input[type='checkbox']:checked
+  ~ .review-form-checkbox
+  > .review-form-checkbox-icon {
+  opacity: 1;
+  transform: scale(1);
+}
+.review-form-link {
+  color: #4d5ae5;
+}
+.review-form-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  min-width: 169px;
+  min-height: 56px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  border-radius: 4px;
+  border: transparent;
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 300ms ease-in;
+}
+.review-form-btn:hover,
+.review-form-btn:focus {
+  background: #1624bb;
+}
+.review-form-btn:disabled {
+  background: #848486;
+  cursor: not-allowed;
+}
+
+.review-form-input:not(:placeholder-shown):valid:required {
+  border-color: lightgreen;
+}
+.review-form-input:not(:placeholder-shown):valid:required ~ .review-form-icon {
+  fill: lightgreen;
+}
+.review-form-input:not(:placeholder-shown):invalid:required {
+  border-color: red;
+}
+.review-form-input:not(:placeholder-shown):invalid:required
+  ~ .review-form-icon {
+  fill: red;
+}
+.success,
+.error {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.success {
+  fill: lightgreen;
+}
+.error {
+  fill: red;
+}
+.review-form-input:not(:placeholder-shown):valid:required ~ .success {
+  opacity: 1;
+}
+.review-form-input:not(:placeholder-shown):invalid:required ~ .error {
+  opacity: 1;
+}
