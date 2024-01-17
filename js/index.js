@@ -30,17 +30,16 @@ function formHandler(event) {
 
 // Check Privacy policy
 const labelEl = document.querySelector('.review-form-agreement');
-const inputEl = document.querySelector('input[type="checkbox"]');
 const reviewFormBtn = document.querySelector('.review-form-btn');
+const inputEl = document.querySelector('#agreement-checkbox');
 
-labelEl.addEventListener('change', unlockBtn);
+document.addEventListener('DOMContentLoaded', unlockBtn);
+inputEl.addEventListener('change', unlockBtn);
 
 function unlockBtn() {
-  const isChecked = inputEl.getAttribute('checked');
+  const isChecked = inputEl.checked;
 
-  if (isChecked) {
-    reviewFormBtn.removeAttribute('disabled');
-  } else {
-    reviewFormBtn.setAttribute('disabled', 'true');
-  }
+  isChecked
+    ? (reviewFormBtn.disabled = false)
+    : (reviewFormBtn.disabled = true);
 }
