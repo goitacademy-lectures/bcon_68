@@ -769,10 +769,9 @@ img {
   transition-delay: 200ms;
 }
 .backdrop.is-hidden {
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   pointer-events: none;
-
   transition-timing-function: ease-out;
 }
 .modal {
