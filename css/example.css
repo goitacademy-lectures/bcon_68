@@ -1,0 +1,115 @@
+/* benefits */
+/* Mobile */
+.benefits {
+}
+.container {
+}
+.benefits-title {
+}
+.visually-hidden {
+}
+.benefits-list {
+}
+.benefits-item {
+}
+.benefits-wrapper {
+}
+.benefits-icon {
+}
+.benefits-caption {
+}
+.benefits-desc {
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+  .benefits {
+  }
+  .benefits-list {
+  }
+  .benefits-item {
+  }
+  .benefits-wrapper {
+  }
+  .benefits-icon {
+  }
+  .benefits-caption {
+  }
+  .benefits-desc {
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 1200px) {
+  .benefits {
+  }
+  .benefits-list {
+  }
+  .benefits-item {
+  }
+}
+
+/* Ingriidients */
+.ingridients {
+}
+.hide {
+}
+.container {
+}
+.ingridients-title {
+}
+.accent {
+}
+.ingridients-list {
+}
+.ingridients-item {
+}
+.ingredients-icon {
+}
+.ingridients-ill {
+}
+.ingridients-caption {
+}
+@media only screen and (min-width: 768px) {
+  .ingridients {
+  }
+  .hide {
+  }
+  .container {
+  }
+  .ingridients-title {
+  }
+  .accent {
+  }
+  .ingridients-list {
+  }
+  .ingridients-item {
+  }
+  .ingredients-icon {
+  }
+  .ingridients-ill {
+  }
+  .ingridients-caption {
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ingridients {
+  }
+  .hide {
+  }
+  .container {
+  }
+  .ingridients-title {
+  }
+  .accent {
+  }
+  .ingridients-list {
+  }
+  .ingridients-item {
+  }
+  .ingredients-icon {
+  }
+  .ingridients-ill {
+  }
+  .ingridients-caption {
+  }
+}
