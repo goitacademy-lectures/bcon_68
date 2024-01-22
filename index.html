@@ -24,7 +24,7 @@
   </head>
   <body class="page">
     <!-- Header section -->
-    <header class="header hide" id="home">
+    <header class="header" id="home">
       <div class="container">
         <nav class="header-nav">
           <a class="logo" href="./index.html">
@@ -33,6 +33,15 @@
               <use href="./images/icons.svg#icon-logo"></use>
             </svg>
           </a>
+          <button
+            class="header-menu"
+            type="button"
+            aria-label="Mobile menu open button"
+            aria-labelledby="mobile-menu">
+            <svg class="header-menu-icon" width="28" height="28">
+              <use href="./images/icons.svg#menu-icon"></use>
+            </svg>
+          </button>
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link current" href="#home">Home</a>
@@ -83,6 +92,17 @@
             </a>
           </li>
         </ul>
+
+        <!-- <address class="header-address">
+          <ul class="header-address-list">
+            <li class="header-address-item">
+              <a class="header-address-link" href="">info@devstudio.com</a>
+            </li>
+            <li class="header-address-item">
+              <a class="header-address-link" href="">+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </address> -->
       </div>
     </header>
     <!-- Main -->
@@ -304,6 +324,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-1.jpg    1x,
+                  ./images/products/img-1@2x.jpg 2x
+                "
                 src="./images/products/img-1.jpg"
                 alt=""
                 width="230"
@@ -315,6 +339,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-2.jpg    1x,
+                  ./images/products/img-2@2x.jpg 2x
+                "
                 src="./images/products/img-2.jpg"
                 alt=""
                 width="230"
@@ -326,6 +354,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-3.jpg    1x,
+                  ./images/products/img-3@2x.jpg 2x
+                "
                 src="./images/products/img-3.jpg"
                 alt=""
                 width="230"
@@ -337,6 +369,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-4.jpg    1x,
+                  ./images/products/img-4@2x.jpg 2x
+                "
                 src="./images/products/img-4.jpg"
                 alt=""
                 width="230"
@@ -348,6 +384,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-5.jpg    1x,
+                  ./images/products/img-5@2x.jpg 2x
+                "
                 src="./images/products/img-5.jpg"
                 alt=""
                 width="230"
@@ -359,6 +399,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-6.jpg    1x,
+                  ./images/products/img-6@2x.jpg 2x
+                "
                 src="./images/products/img-6.jpg"
                 alt=""
                 width="230"
@@ -370,6 +414,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-7.jpg    1x,
+                  ./images/products/img-7@2x.jpg 2x
+                "
                 src="./images/products/img-7.jpg"
                 alt=""
                 width="230"
@@ -381,6 +429,10 @@
             <li class="products-item">
               <img
                 class="products-ill"
+                srcset="
+                  ./images/products/img-8.jpg    1x,
+                  ./images/products/img-8@2x.jpg 2x
+                "
                 src="./images/products/img-8.jpg"
                 alt=""
                 width="230"
@@ -401,12 +453,32 @@
           <ul class="bestsellers-list">
             <li class="bestsellers-item">
               <div class="bestsellers-thumb">
-                <img
-                  class="bestsellers-ill"
-                  src="./images/bestsellers/img-1.jpg"
-                  alt="Chocolate with nuts"
-                  width="368"
-                  height="464" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/bestsellers/img-1_desk@1x.jpg 1x,
+                      ./images/bestsellers/img-1_desk@2x.jpg 2x
+                    " />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/bestsellers/img-1_tab@1x.jpg 1x,
+                      ./images/bestsellers/img-1_tab@2x.jpg 2x
+                    " />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/bestsellers/img-1_mob@1x.jpg 1x,
+                      ./images/bestsellers/img-1_mob@2x.jpg 2x
+                    " />
+                  <img
+                    class="bestsellers-ill"
+                    src="./images/bestsellers/img-1_mob@1x.jpg"
+                    alt="Chocolate with nuts"
+                    width="368"
+                    height="464" />
+                </picture>
                 <p class="overlay">
                   Chocolate with fruit is an unbeatable combination of two of
                   the tastiest things in the world. This dessert combines
@@ -507,7 +579,7 @@
       </section>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -595,6 +667,82 @@
         </div>
       </div>
     </footer>
+
+    <!-- Footer WebStudio -->
+    <footer class="studio-footer">
+      <div class="container">
+        <div class="studio-footer-top">
+          <a class="studio-footer-logo" href="">
+            Web
+            <span>Studio</span>
+          </a>
+          <p class="studio-footer-desc">
+            Increase the flow of customers and sales for your business with
+            digital marketing &amp; growth solutions.
+          </p>
+        </div>
+        <div class="studio-footer-middle">
+          <p class="studio-footer-caption">Social media</p>
+          <ul class="mobile-menu-socials socials">
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Link to Facebook">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Link to Instagram">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Link to Twitter">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Link to Instagram">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="studio-footer-bottom">
+          <p class="studio-footer-caption">Subscribe</p>
+          <form class="studio-footer-form">
+            <input type="email" placeholder="E-mail" />
+            <button type="submit">Subscribe ✈️</button>
+          </form>
+        </div>
+      </div>
+    </footer>
     <!-- Modal window -->
     <div class="backdrop is-open hide">
       <div class="modal">
@@ -672,6 +820,88 @@
           <button class="btn btn-accent" type="submit">Send</button>
         </form>
       </div>
+    </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <button
+        class="mobile-menu-btn"
+        type="button"
+        aria-label="Mobile menu close button">
+        <svg class="mobile-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-x-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-nav">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link current" href="">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts">
+        <li>
+          <a href="tel:110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-socials socials">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Facebook">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Instagram">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Twitter">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Instagram">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>
